@@ -1,0 +1,20 @@
+{
+  "name": "@forgequiz/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared ESLint configuration presets for ForgeQuiz workspaces (dev-only).",
+  "license": "UNLICENSED",
+  "main": "./index.cjs",
+  "exports": {
+    ".": "./index.cjs",
+    "./next": "./next.cjs"
+  },
+  "peerDependencies": {
+    "eslint": ">=8",
+    "eslint-config-next": ">=14",
+    "next": ">=14",
+    "typescript": ">=5"
+  }
+}
+
+

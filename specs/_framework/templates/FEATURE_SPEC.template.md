@@ -2,6 +2,11 @@
 
 > Runbook: `/specs/_framework/runbooks/SPEC_CREATION.md`
 
+### Guardrails
+- This document is **spec-only**.
+- Do **not** create or modify `PLAN.md` as part of writing the spec.
+- Do **not** include implementation task lists here (those belong in `PLAN.md`).
+
 ### ID (folder name)
 - `YYYY_MM_DD-<seq>-<slug>` (example: `2025_12_28-001-system-framework`)
 
