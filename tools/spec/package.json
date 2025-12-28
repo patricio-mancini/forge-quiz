@@ -1,0 +1,9 @@
+{
+  "name": "@forgequiz/spec-tools",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Dev/CI-only tooling for the ForgeQuiz SSD framework (scaffolding + validation).",
+  "license": "UNLICENSED"
+}
+
+
