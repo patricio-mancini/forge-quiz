@@ -4,7 +4,7 @@
 2025_12_28-001-system-framework
 
 ### Status
-draft
+accepted
 
 ### Purpose
 Define repo-wide invariants and the minimal structure required for safe development by humans and limited-context AI agents.

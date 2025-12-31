@@ -2,6 +2,11 @@
 
 > Runbook: `/specs/_framework/runbooks/PLAN_CONTRACTS.md`
 
+### Guardrails
+- This document is **plan-only** (steps + files + deterministic validations).
+- Do **not** implement product code/tests while writing the plan; execution belongs to `/specs/_framework/runbooks/EXECUTION.md`.
+- If you discover missing spec detail, stop and update `SPEC.md` first (separate prompt), then return to planning.
+
 ### ID (folder name)
 - `YYYY_MM_DD-<seq>-<slug>` (example: `2025_12_28-001-system-framework`)
 
@@ -27,6 +32,7 @@
 2) Implementation
    - Files:
    - Notes:
+     - If adding new workspace packages under `apps/*` or `packages/*`, include an `AGENT_GUIDE.md` for each (ownership + invariants + safe edit rules).
 
 3) Tests
    - Unit:

@@ -30,8 +30,6 @@
    - link to `specs/2025_12_28-001-system-framework/SPEC.md`
 
 ### Verification checklist
-- Folder skeleton exists as defined in SPEC.
-- Templates are minimal and consistent with the Constitution.
-- Monorepo tool choice is documented as an ADR.
-
-
+- [x] Folder skeleton exists as defined in SPEC.
+- [x] Templates are minimal and consistent with the Constitution.
+- [x] Monorepo tool choice is documented as an ADR.

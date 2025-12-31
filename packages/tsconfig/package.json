@@ -1,0 +1,16 @@
+{
+  "name": "@forgequiz/tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared TypeScript configuration presets for ForgeQuiz workspaces (no runtime code).",
+  "license": "UNLICENSED",
+  "files": [
+    "*.json"
+  ],
+  "exports": {
+    "./base": "./base.json",
+    "./nextjs": "./nextjs.json"
+  }
+}
+
+

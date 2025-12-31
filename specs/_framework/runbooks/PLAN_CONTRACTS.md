@@ -7,6 +7,15 @@ Policy authority (do not restate here):
 - Contracts rules: `/specs/_framework/CONTRACTS.md`
 - ADR rules: `/specs/_framework/ADR_PROCESS.md`
 
+## Guardrails (hard rules)
+
+- This runbook creates/edits **only** planning artifacts:
+  - `PLAN.md`
+  - Contracts under `/modules/<module>/contracts/**` (**only if Gate A requires**)
+  - An ADR under `/architecture/adr/**` (**only if Gate B requires**)
+- **Do not** implement product code or tests in this step. Implementation belongs to: `/specs/_framework/runbooks/EXECUTION.md`.
+- If `SPEC.md` is missing required detail (scope, invariants, ACs, contracts clarity), stop and request a separate prompt to update the spec (do not “patch spec + write plan” in one step).
+
 ## Inputs
 
 - Feature spec: `./SPEC.md`

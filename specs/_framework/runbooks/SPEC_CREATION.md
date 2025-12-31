@@ -6,6 +6,12 @@ Policy authority (do not restate here):
 - Governance/principles: `CONSTITUTION.md`
 - Lifecycle gates: `/specs/_framework/SSD_SDLC.md`
 
+## Guardrails (hard rules)
+
+- This runbook creates/edits **only** `SPEC.md`.
+- **Do not** create or modify `PLAN.md` as part of spec creation.
+- Planning is a separate runbook and a separate prompt: `/specs/_framework/runbooks/PLAN_CONTRACTS.md`.
+
 ## Inputs
 
 - User prompt / request (the “learning contract” intent, feature intent, or change intent)
@@ -15,8 +21,12 @@ Policy authority (do not restate here):
 ## Output
 
 - `/specs/YYYY_MM_DD-<seq>-<slug>/SPEC.md` using `/specs/_framework/templates/FEATURE_SPEC.template.md`
+- No other artifacts (explicitly: **no** `PLAN.md`, no contracts, no ADRs)
 
 ## Procedure (deterministic)
+
+0) Confirm intent: spec-only
+   - If the user asks for a plan, stop and request a separate prompt to run `/specs/_framework/runbooks/PLAN_CONTRACTS.md`
 
 1) Create the spec folder (follow `/specs/_framework/NAMING.md`)
 2) Copy the feature spec template into `SPEC.md`
@@ -47,6 +57,7 @@ Policy authority (do not restate here):
 ## Completion checklist (must be true before planning)
 
 - `SPEC.md` exists and uses the template structure
+- No `PLAN.md` was created or modified by this runbook
 - Every acceptance criterion is testable (no vague words like “fast” without a threshold)
 - Every invariant has at least one validation rule and at least one test idea implied
 - Edge cases exist and each includes a proposed solution/handling

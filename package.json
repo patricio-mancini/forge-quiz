@@ -4,7 +4,12 @@
   "version": "0.0.0",
   "packageManager": "pnpm@9.15.0",
   "description": "ForgeQuiz monorepo (spec-first modular monolith).",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "scripts": {
+    "workspace:list": "pnpm -r list --depth -1",
+    "check:no-tools-runtime-deps": "node ./tools/spec/check-no-tools-runtime-deps.cjs",
+    "verify:workspace": "pnpm -w workspace:list && pnpm -w check:no-tools-runtime-deps"
+  }
 }
 
 

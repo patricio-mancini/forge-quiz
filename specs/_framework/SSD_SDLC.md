@@ -25,8 +25,27 @@ For step-by-step instructions to produce artifacts deterministically, follow:
 - **Feature plan** (required): `/specs/YYYY_MM_DD-<seq>-<slug>/PLAN.md`
 - **Contracts** (required when boundary shapes change): `/modules/<module>/contracts/*`
 - **ADR** (required for architecture decisions): `/architecture/adr/YYYY_MM_DD-<seq>-<slug>.md`
+- **Agent guides** (required for safe AI edits):
+  - `/modules/<module>/AGENT_GUIDE.md` for product modules
+  - `apps/*/AGENT_GUIDE.md` and `packages/*/AGENT_GUIDE.md` for workspace packages that agents are expected to modify
 
 Naming rules are defined in: `/specs/_framework/NAMING.md`
+
+## Phase boundaries (artifact permissions)
+
+Treat each phase as a separate output boundary (especially for AI agents):
+
+- **Spec phase** (`runbooks/SPEC_CREATION.md`)
+  - Allowed outputs: create/edit `SPEC.md` only
+  - Forbidden: creating `PLAN.md`, writing contracts, writing ADRs, implementing code/tests
+
+- **Plan phase** (`runbooks/PLAN_CONTRACTS.md`)
+  - Allowed outputs: create/edit `PLAN.md`; update contracts and/or ADR **only when deterministically required**
+  - Forbidden: implementing product code/tests
+
+- **Execution phase** (`runbooks/EXECUTION.md`)
+  - Allowed outputs: code/tests/docs changes that implement `PLAN.md`
+  - Forbidden: adding new scope; if required work is missing, update `PLAN.md` (and `SPEC.md` if scope changes) before continuing
 
 ## Lifecycle (gated)
 
@@ -71,6 +90,8 @@ Validate deterministically:
 Update module docs if behavior/invariants changed:
 - `modules/<module>/AGENT_GUIDE.md`
 - `modules/<module>/contracts/README.md`
+
+If you created a new workspace package under `apps/*` or `packages/*`, add an `AGENT_GUIDE.md` describing ownership, invariants, and safe edit rules.
 
 Add an ADR when a decision changes architecture constraints.
 

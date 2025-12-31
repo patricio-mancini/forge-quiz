@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# pnpm store (should never be committed)
+.pnpm-store/
+
+# next.js
+.next/
+out/
+tsconfig.tsbuildinfo
+
+# build outputs
+dist/
+build/
+coverage/
+
+# logs
+*.log
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
